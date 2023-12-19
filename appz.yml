@@ -1,18 +1,18 @@
 app:
   name: AppzElasticsearch
   code: AES
-  notify: appz@cloudbourne.co
+  notify: aramanan@ecloudcontrol.com
 
 build:
-  version: 7.9
+  version: 7.10
   env: DEV
   build_file: none
   output_files: output/*.zip
-  image_template: elasticsearch-7.9
-  image_name: alpha/elasticsearch
+  image_template: elasticsearch-7.10
+  image_name: aryam21/elasticsearch
 
 deploy:
-  context: alpha/DEV
+  context: aryam21/DEV
   type: elasticsearch6  
   replicas: 1
   port:
@@ -26,9 +26,7 @@ volumes:
   size: 20Gi
   mode: ReadWriteOnce
   class: microk8s-hostpath
-
-monitor:
-  notify: appzops@cloudbourne.co      
-
 properties:
-  revision : 04
+  NODE_MODE: multi-node
+  REPLICA_COUNT: 3
+  revision : 4
