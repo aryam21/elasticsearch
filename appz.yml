@@ -31,6 +31,6 @@ properties:
   REPLICA_COUNT: 3
   MAX_RESULT_WINDOW: 10000000
   ENABLE_ILM: 1
-  MIN_AGE_WARM: 12m
-  MIN_AGE_COLD: 18m
-  revision : 8
+  MIN_AGE_WARM: 10m
+  MIN_AGE_COLD: 20m
+  revision : 9
