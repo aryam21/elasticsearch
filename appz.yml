@@ -33,4 +33,4 @@ properties:
   ENABLE_ILM: 1
   MIN_AGE_WARM: 6h
   MIN_AGE_COLD: 12h
-  revision : 12
+  revision : 13
